@@ -24,10 +24,8 @@
 | episode            | integer    | null: false                    |
 | favorite           | string     | null: false                    |
 
+
 ### Association
 
-<<<<<<< Updated upstream
 - belongs_to :user
-=======
-- belongs_to :user
->>>>>>> Stashed changes
+
