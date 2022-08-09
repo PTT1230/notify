@@ -17,12 +17,13 @@
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
-| tittle             | integer    | null: false                    |
-| media              | integer    | null: false                    |
-| url                | integer    | null: false                    |
-| stream             | integer    | null: false                    |
-| episode            | integer    | null: false                    |
+| tittle             | string     | null: false                    |
+| media              | string     | null: false                    |
+| url                | string     | null: false                    |
+| stream             | string     | null: false                    |
+| episode            | string     | null: false                    |
 | favorite           | string     | null: false                    |
+| user               | references | null: false, foreign_key: true |
 
 
 ### Association
