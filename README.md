@@ -10,23 +10,8 @@
 
 ### Association
 
-- has_many :favorites
+- has_many :contents
 - has_many :lineflags
-
-
-## favorites テーブル
-
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| user               | references | null: false, foreign_key: true |
-| content            | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :content
-- belongs_to :user
-- has_one :lineflag
-
 
 ## lineflags テーブル
 
