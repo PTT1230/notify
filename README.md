@@ -26,4 +26,8 @@
 
 ### Association
 
+<<<<<<< Updated upstream
 - belongs_to :user
+=======
+- belongs_to :user
+>>>>>>> Stashed changes
