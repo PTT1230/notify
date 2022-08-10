@@ -15,4 +15,6 @@ class Media < ActiveHash::Base
     { id: 8, name: 'TELASA' },
     { id: 10, name: 'その他' }
   ]
+  include ActiveHash::Associations
+  has_many :contents
   end

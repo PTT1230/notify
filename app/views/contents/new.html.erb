@@ -1,0 +1,12 @@
+<div class="contents row">
+  <div class="container">
+    <h3></h3>
+    <%= form_with(model: @content, local: true) do |f| %>
+      <%= f.collection_select(:week_id, @week, :id, :name, {}, {id:"content_week_id"}) %>
+      <%= f.collection_select(:media_id, @media, :id, :name, {}, {id:"content_image"}) %>
+      <%= f.collection_select(:notify_id, @notice, :id, :name, {}, {}) %>
+      <%= f.text_area :tittle, id:"content_text", placeholder:"tittle" %>
+      <%= f.submit "SEND" %>
+    <% end %>
+  </div>
+</div>
