@@ -10,6 +10,15 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "prettier": "^2.7.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-prettier": "^2.0.0",
+    "stylelint-scss": "^4.3.0",
     "webpack-dev-server": "^4.9.3"
+  },
+  "scripts": {
+    "lint:stylesheet": "stylelint --fix app/assets/stylesheets/**/*.scss"
   }
 }
