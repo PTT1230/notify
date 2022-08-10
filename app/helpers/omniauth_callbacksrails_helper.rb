@@ -1,0 +1,2 @@
+module OmniauthCallbacksrailsHelper
+end
