@@ -1,0 +1,14 @@
+<h1>Contents#index</h1>
+<%= link_to "新規", new_content_path %>
+
+<h1>記事一覧</h1>
+<div class="contents row">
+  <% @contents.each do |content| %>
+    <div class="content_post" style="background-image: url(<%= tweet.image %>);">
+      <p><%= content.tittle %></p>
+      <span class="name">
+        <%= content.week.name %>
+      </span>
+    </div>
+  <% end %>
+</div>

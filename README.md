@@ -18,11 +18,11 @@
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
 | tittle             | string     | null: false                    |
-| media              | string     | null: false                    |
-| url                | string     | null: false                    |
-| stream             | string     | null: false                    |
-| episode            | string     | null: false                    |
-| favorite           | string     | null: false                    |
+| media              | integer    | null: false                    |
+| url                | string     |                                |
+| week               | integer    | null: false                    |
+| episode            | string     |                                |
+| notify             | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
 
