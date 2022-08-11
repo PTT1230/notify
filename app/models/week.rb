@@ -9,8 +9,5 @@ class Week < ActiveHash::Base
     { id: 7, name: '土曜日' },
     { id: 8, name: '日曜日' }
   ]
- 
-  include ActiveHash::Associations
-  has_many :contents
- 
 end
+include ActiveHash::Associations

@@ -14,10 +14,10 @@ ActiveRecord::Schema.define(version: 2022_08_10_060635) do
 
   create_table "contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "url"
-    t.string "tittle", null: false
-    t.integer "week", null: false
+    t.string "title", null: false
+    t.integer "week_id", null: false
     t.string "episode"
-    t.integer "notify", null: false
+    t.integer "notice_id", null: false
     t.integer "media_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false

@@ -6,7 +6,7 @@ class Media < ActiveHash::Base
     { id: 4, name: 'Hulu' },
     { id: 5, name: 'PrimeVideo' },
     { id: 6, name: 'Abema' },
-    { id: 7, name: 'Disney＋' },
+    { id: 7, name: 'Disney+' },
     { id: 8, name: 'dTV' },
     { id: 8, name: 'dアニメ' },
     { id: 9, name: 'U-NEXT' },
@@ -15,6 +15,5 @@ class Media < ActiveHash::Base
     { id: 8, name: 'TELASA' },
     { id: 10, name: 'その他' }
   ]
-  include ActiveHash::Associations
-  has_many :contents
-  end
+end
+include ActiveHash::Associations

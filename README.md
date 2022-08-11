@@ -17,7 +17,7 @@
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
-| tittle             | string     | null: false                    |
+| title              | string     | null: false                    |
 | media              | integer    | null: false                    |
 | url                | string     |                                |
 | week               | integer    | null: false                    |

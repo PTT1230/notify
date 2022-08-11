@@ -4,9 +4,6 @@ class ContentsController < ApplicationController
   end
   def new
     @content = Content.new
-    @week = Week.all
-    @media = Media.all
-    @notice = Notice.all
   end
 
   def create
@@ -21,7 +18,7 @@ class ContentsController < ApplicationController
   private
 
   def content_params
-    params.require(:content).permit(:title, :media_id, :url, :week_id, :episode, :notify_id, :user_id).merge(user_id: current_user.id)
+    params.require(:content).permit(:title, :media_id, :url, :week_id, :episode, :notice_id, :user_id).merge(user_id: current_user.id)
   end
 
 end

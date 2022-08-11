@@ -1,15 +1,15 @@
 class Content < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :media
-  belongs_to :week
-  belongs_to :user
-  belongs_to :notify
+  belongs_to_active_hash :media;
+  belongs_to_active_hash :week;
+  belongs_to_active_hash :user;
+  belongs_to_active_hash :notice;
 
-  with_options presence: true do 
-    validates :title
-    validates :user_id
-  end
+
+  validates :title,     presence: true
+  validates :user_id,   presence: true
+
   validates :media_id,  numericality: { other_than: 1, message: "can't be blank" }
   validates :week_id,   numericality: { other_than: 1, message: "can't be blank" }
-  validates :notify_id, numericality: { other_than: 1, message: "can't be blank" }
+  validates :notice_id, numericality: { other_than: 1, message: "can't be blank" }
 end

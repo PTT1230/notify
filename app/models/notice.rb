@@ -4,7 +4,5 @@ class Notice < ActiveHash::Base
     { id: 2, name: '通知する' },
     { id: 3, name: '通知しない' }
   ]
-  
-  include ActiveHash::Associations
-  has_many :contents
  end
+ include ActiveHash::Associations
