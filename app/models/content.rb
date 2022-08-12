@@ -1,10 +1,9 @@
 class Content < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to_active_hash :media;
-  belongs_to_active_hash :week;
-  belongs_to_active_hash :user;
-  belongs_to_active_hash :notice;
-
+  belongs_to_active_hash :media
+  belongs_to_active_hash :week
+  belongs_to_active_hash :notice
+  belongs_to :user
 
   validates :title,     presence: true
   validates :user_id,   presence: true

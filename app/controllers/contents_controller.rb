@@ -1,4 +1,6 @@
 class ContentsController < ApplicationController
+before_action :move_to_index, except: [:index]
+
   def index
     @contents = Content.all
   end
@@ -22,10 +24,27 @@ class ContentsController < ApplicationController
     end
   end
 
+  def edit
+    @content = Content.find(params[:id])
+  end
+
+  def update
+    content = Content.find(params[:id])
+    if content.update(content_params)
+      redirect_to root_path
+    end
+  end
+
   private
 
   def content_params
     params.require(:content).permit(:title, :media_id, :url, :week_id, :episode, :notice_id, :user_id).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
   end
 
 end
