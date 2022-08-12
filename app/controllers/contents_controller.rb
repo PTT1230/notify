@@ -2,7 +2,7 @@ class ContentsController < ApplicationController
 before_action :move_to_index, except: [:index]
 
   def index
-    @contents = Content.all
+    @contents = Content.includes(:user).order("created_at DESC")
   end
   def new
     @content = Content.new
@@ -38,7 +38,7 @@ before_action :move_to_index, except: [:index]
   private
 
   def content_params
-    params.require(:content).permit(:title, :media_id, :url, :week_id, :episode, :notice_id, :user_id).merge(user_id: current_user.id)
+    params.require(:content).permit(:title, :media_id, :url, :week_id, :episode, :notice_id).merge(user_id: current_user.id)
   end
 
   def move_to_index

@@ -1,0 +1,7 @@
+
+<div class="contents row">
+  <p><%= @nickname %>さんの投稿一覧</p>
+  <% @contents.each do |content| %>
+    <%= render partial: "contents/content", locals: { content: content } %>   
+  <% end %>
+</div>
