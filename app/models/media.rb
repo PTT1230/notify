@@ -8,12 +8,12 @@ class Media < ActiveHash::Base
     { id: 6, name: 'Abema' },
     { id: 7, name: 'Disney+' },
     { id: 8, name: 'dTV' },
-    { id: 8, name: 'dアニメ' },
-    { id: 9, name: 'U-NEXT' },
-    { id: 8, name: 'Paravi' },
-    { id: 8, name: 'FOD' },
-    { id: 8, name: 'TELASA' },
-    { id: 10, name: 'その他' }
+    { id: 9, name: 'dアニメ' },
+    { id: 10, name: 'U-NEXT' },
+    { id: 11, name: 'Paravi' },
+    { id: 12, name: 'FOD' },
+    { id: 13, name: 'TELASA' },
+    { id: 14, name: 'その他' }
   ]
 end
 include ActiveHash::Associations
