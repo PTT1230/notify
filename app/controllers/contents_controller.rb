@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ContentsController < ApplicationController
   before_action :move_to_index, except: [:index]
 
@@ -35,7 +37,8 @@ class ContentsController < ApplicationController
   private
 
   def content_params
-    params.require(:content).permit(:title, :media_id, :url, :week_id, :episode, :notice_id).merge(user_id: current_user.id)
+    params.require(:content).permit(:title, :media_id, :url, :week_id, :episode,
+                                    :notice_id).merge(user_id: current_user.id)
   end
 
   def move_to_index

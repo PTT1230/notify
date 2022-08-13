@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Content < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :media
@@ -6,7 +8,6 @@ class Content < ApplicationRecord
   belongs_to :user
 
   validates :title,     presence: true
-  validates :user_id,   presence: true
 
   validates :media_id,  numericality: { other_than: 1, message: "can't be blank" }
   validates :week_id,   numericality: { other_than: 1, message: "can't be blank" }

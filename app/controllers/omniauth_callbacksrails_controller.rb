@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def line
     basic_action
@@ -11,7 +13,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       @profile = User.find_or_initialize_by(provider: @omniauth['provider'], uid: @omniauth['uid'])
       if @profile.email.blank?
         email = @omniauth['info']['email'] || "#{@omniauth['uid']}-#{@omniauth['provider']}@example.com"
-        @profile = current_user || User.create!(provider: @omniauth['provider'], uid: @omniauth['uid'], email: email,
+        @profile = current_user || User.create!(provider: @omniauth['provider'], uid: @omniauth['uid'], email:,
                                                 name: @omniauth['info']['name'], password: Devise.friendly_token[0, 20])
       end
       @profile.set_values(@omniauth)
