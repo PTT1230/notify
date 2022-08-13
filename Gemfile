@@ -40,6 +40,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'rubocop', require: false
+  gem 'erb_lint', require: false
 end
 
 group :test do
@@ -48,9 +50,6 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
-end
-group :development do
-  gem 'rubocop', require: false
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -61,3 +60,10 @@ gem 'omniauth-rails_csrf_protection'
 gem 'dotenv-rails'
 gem 'omniauth', '~> 1.9.1'
 gem 'active_hash'
+
+gem 'rubocop'
+gem 'rubocop-ast'
+gem 'rubocop-performance'
+gem 'rubocop-rails'
+gem 'rubocop-rake'
+gem 'rubocop-rspec'

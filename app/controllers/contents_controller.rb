@@ -1,9 +1,10 @@
 class ContentsController < ApplicationController
-before_action :move_to_index, except: [:index]
+  before_action :move_to_index, except: [:index]
 
   def index
-    @contents = Content.includes(:user).order("created_at DESC")
+    @contents = Content.includes(:user).order('created_at DESC')
   end
+
   def new
     @content = Content.new
   end
@@ -19,9 +20,7 @@ before_action :move_to_index, except: [:index]
 
   def destroy
     content = Content.find(params[:id])
-    if content.destroy
-      redirect_to root_path
-    end
+    redirect_to root_path if content.destroy
   end
 
   def edit
@@ -30,9 +29,7 @@ before_action :move_to_index, except: [:index]
 
   def update
     content = Content.find(params[:id])
-    if content.update(content_params)
-      redirect_to root_path
-    end
+    redirect_to root_path if content.update(content_params)
   end
 
   private
@@ -42,9 +39,6 @@ before_action :move_to_index, except: [:index]
   end
 
   def move_to_index
-    unless user_signed_in?
-      redirect_to action: :index
-    end
+    redirect_to action: :index unless user_signed_in?
   end
-
 end

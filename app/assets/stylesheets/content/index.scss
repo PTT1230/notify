@@ -1,5 +1,19 @@
+.header {
+  background-color: black;
+  height: 150px;
 
-h1 {
-  font-size: 30px;
- 
+  .header__bar {
+    display: flex;
+  .grid-6 {
+    a {
+    color: azure;
+    text-decoration: none;
+    letter-spacing: 2px;
+    }
+    .post {
+      color: aquamarine;
+      justify-content: flex-end;
+    }
+    }
+  }
 }
