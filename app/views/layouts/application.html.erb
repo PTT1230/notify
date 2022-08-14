@@ -15,14 +15,14 @@
         <h1 class="grid-6"><a href="/">Notify</a></h1>
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
-            <span><%= current_user.nickname %>
+            <div class="user_nav" ><%= current_user.nickname %>
               <ul class="user__info">
                 <li>
                   <%= link_to 'My Page', "/users/#{current_user.id}" %>
                   <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
                 </li>
               </ul>
-            </span>
+            </div>
             <%= link_to '登録', new_content_path, class: 'post' %>
           </div>
         <% else %>
