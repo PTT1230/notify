@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class ContentsController < ApplicationController
   before_action :move_to_index, except: [:index]
 
