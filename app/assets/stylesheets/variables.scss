@@ -8,5 +8,5 @@ $breakpoints: (
 @mixin mq($size) {
   @media screen and (max-width: #{map-get($breakpoints, $size)}) {
     @content;
-  }
+  } 
 }
