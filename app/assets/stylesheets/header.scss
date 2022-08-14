@@ -3,11 +3,11 @@
   background-color: gray;
   height: 150px;
 
-    h1 a {
+  h1 a {
     color: azure;
     text-decoration: none;
     letter-spacing: 4px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-size: 40px;
     &:hover {
       color: #222;
@@ -15,14 +15,14 @@
   }
   .user_nav {
     color: aqua;
-        }
-.user__info {
-  li {
-    list-style: none;
-    .post {
-      color: aquamarine;
-      justify-content: flex-end;
+  }
+  .user__info {
+    li {
+      list-style: none;
+      .post {
+        color: aquamarine;
+        justify-content: flex-end;
+      }
     }
   }
-        }
 }

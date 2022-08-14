@@ -19,6 +19,6 @@
     "webpack-dev-server": "^4.9.3"
   },
   "scripts": {
-    "lint:stylesheet": "stylelint --fix app/assets/stylesheets/**/*.scss"
+    "lint:stylesheet": "stylelint --fix **/*.{css,scss}"
   }
 }
