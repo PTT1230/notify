@@ -32,4 +32,8 @@
 
 
 
-## yarn lint:stylesheet
+## lintのcheck用
+
+- yarn lint:stylesheet
+- erblint --lint-all -a
+- bundle exec rubocop -a
