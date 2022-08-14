@@ -37,7 +37,7 @@
     justify-content: flex-end;
     align-items: center;
     text-align: right;
-    padding-right: 10px;
+    padding-right: 20px;
 
     .post {
       text-decoration: none;
@@ -51,7 +51,12 @@
       color: #222;
       font-size: 30px;
     }
+    .user_out {
+      display: flex;
+      flex-direction: column;
+    }
     .user_link {
+      font-size: 30px;
       text-decoration: none;
       color: rgb(248, 254, 254);
       &:hover {
