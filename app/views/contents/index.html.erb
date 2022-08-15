@@ -1,31 +1,33 @@
-<div class="contents row">
+<div class="contents">
   <% unless user_signed_in? %>
-    <div class="grid-6">
-      <%= link_to 'Log In', new_user_session_path, class: 'post' %>
-      <%= link_to 'Sign Up', new_user_registration_path, class: 'post' %>
+    <div class="user_out">
+      <%= link_to 'Log In', new_user_session_path, class: 'user_link' %>
+      <%= link_to 'Sign Up', new_user_registration_path, class: 'user_link' %>
     </div>
   <% else %>
-    <h1>こんにちは<%= current_user.nickname %></h1>
+    <h1>HELLO!<%= current_user.nickname %></h1>
     <% @contents.each do |content| %>
       <% if current_user.id == content.user_id %>
-        <div class="content_post">
-          <p><%= content.title %></p>
-          <span class="name">
-            <%= content.media.name %>
-            <%= content.week.name %>
-            <%= content.notice.name %>
-          </span>
-          <div class="more">
-            <ul class="more_list">
-              <p>
-                <%= link_to '編集', edit_content_path(content.id), method: :get, class:"linkList" %>
-              </p>
-              <p>
-                <%= link_to '削除', content_path(content.id), method: :delete, class:"linkList" %>
-              </p>
-            </ul>
-          </div>
+      <div class="content_list">
+        <p><%= content.title %></p>
+        <% if content.notice.id == 2 %>
+          <p><i class="fa-regular fa-heart"></i></p>
+        <% else %>
+          <p><i class="fa-regular fa-bell-slash"></i></p>
+        <% end %>
+        <div class="content_item">
+          <ul>
+            <li><%= content.media.name %></li>
+            <li><%= content.week.name %></li>
+          </ul>
         </div>
+        <div class="more_link">
+          <ul>
+            <li><%= link_to 'change', edit_content_path(content.id), method: :get, class:"link" %></li>
+            <li><%= link_to 'delete', content_path(content.id), method: :delete, class:"link" %></li>
+          </ul>
+        </div>
+      </div>
       <% end %>
     <% end %>
   <% end %>
