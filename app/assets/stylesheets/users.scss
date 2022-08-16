@@ -3,18 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /*========= ログイン ===============*/
-.contents {
+.sign_in {
   height: 600px;
   display: flex;
   justify-content: center;
 
   .container {
-text-align: center;
+    text-align: center;
   }
+
+  h1 {
+    margin-top: 50px;
+  }
+
   h2 {
     font-size: 50px;
-    margin: 60px 0;
-    font-family:  "Train One", cursive;
+    margin: 30px 0;
+    font-family: "Train One", cursive;
   }
   .field {
     font-size: 30px;
@@ -22,29 +27,24 @@ text-align: center;
   }
 
   .input-field {
-text-align: center;
-color: #666464;
+    text-align: center;
+    color: #666464;
   }
+
   input[type="email"] {
     width: 80%;
     height: 40px;
     font-size: 20px;
-    }
-  ::placeholder{
-    text-align: center;
   }
 
   input[type="password"] {
     width: 80%;
     height: 40px;
     font-size: 20px;
-    }
-  ::placeholder{
-    text-align: center;
   }
 
   /*リセット */
-  input[type="checkbox"]  {
+  input[type="checkbox"] {
     margin: 0;
     padding: 0;
     background: none;
@@ -59,48 +59,120 @@ color: #666464;
   /* チェックボックスデザイン */
   input[type="checkbox"] {
     cursor: pointer;
-    padding-left: 30px;/*label手前にチェックボックス用の余白を開ける*/
+    padding-left: 30px; /*label手前にチェックボックス用の余白を開ける*/
     vertical-align: middle;
     position: relative;
     margin-top: 20px;
   }
+
   input[type="checkbox"]::before,
   input[type="checkbox"]::after {
     content: "";
-    display: block; 
+    display: block;
     position: absolute;
   }
+
   input[type="checkbox"]::before {
     background-color: #fff;
     border-radius: 0%;
     border: 2px solid #666464;
-    width: 20px;/*チェックボックスの横幅*/
-    height: 20px;/*チェックボックスの縦幅*/
+    width: 20px; /*チェックボックスの横幅*/
+    height: 20px; /*チェックボックスの縦幅*/
     transform: translateY(-50%);
     top: 50%;
     left: 5px;
   }
+
   input[type="checkbox"]::after {
-    border-bottom: 3px solid #666464;/*チェックの太さ*/
-    border-left: 3px solid #666464;/*チェックの太さ*/
-    opacity: 0;/*チェック前は非表示*/
-    height: 6px;/*チェックの高さ*/
-    width: 11px;/*チェックの横幅*/
+    border-bottom: 3px solid #666464; /*チェックの太さ*/
+    border-left: 3px solid #666464; /*チェックの太さ*/
+    opacity: 0; /*チェック前は非表示*/
+    height: 6px; /*チェックの高さ*/
+    width: 11px; /*チェックの横幅*/
     transform: rotate(-45deg);
-    top: -5px;/*チェック時の位置調整*/
-    left: 10px;/*チェック時の位置調整*/
+    top: -5px; /*チェック時の位置調整*/
+    left: 10px; /*チェック時の位置調整*/
   }
   input[type="checkbox"]:checked::after {
-    opacity: 1;/*チェック後表示*/
+    opacity: 1; /*チェック後表示*/
   }
 
   input[type="submit"] {
     font-size: 50px;
     margin-top: 20px;
     &:hover {
-      color: rgb(113, 111, 111)
+      color: rgb(113, 111, 111);
     }
   }
 }
 
 /*========= サインアップ ===============*/
+#sign_up {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+
+  .container {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 50px;
+    margin: 30px 0;
+    font-family: "Train One", cursive;
+    letter-spacing: 4px;
+  }
+
+  .field {
+    font-size: 30px;
+    margin-top: 10px;
+    height: 78px;
+  }
+
+  .input-field {
+    text-align: center;
+    color: #666464;
+  }
+
+  input[type="text"] {
+    width: 80%;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  input[type="email"] {
+    width: 80%;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  input[type="password"] {
+    width: 80%;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  input[type="submit"] {
+    font-size: 50px;
+    margin: 40px 0;
+    &:hover {
+      color: rgb(113, 111, 111);
+    }
+  }
+}
+
+#error_explanation {
+  p {
+    font-size: 20px;
+    color: brown;
+  }
+  li {
+    list-style: none;
+    font-size: 20px;
+    color: brown;
+  }
+}
+
+.field_with_errors {
+  display: inline;
+}
