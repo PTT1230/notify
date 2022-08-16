@@ -1,14 +1,15 @@
-<div class="contents row">
+<div id="new_content">
   <div class="container">
-    <h3></h3>
-    <%= form_with(model: @content, local: true) do |f| %>
-      <%= f.collection_select(:week_id, Week.all, :id, :name, {}, { id: 'content_week_id' }) %>
-      <%= f.collection_select(:media_id, Media.all, :id, :name, {}, { id: 'content_image' }) %>
-      <%= f.collection_select(:notice_id, Notice.all, :id, :name, {}, {}) %>
-      <%= f.text_area :title, id: 'content_text', placeholder: 'tittle' %>
-      <%= f.text_area :url, id: 'content_text', placeholder: 'URL' %>
-      <%= f.text_area :episode, id: 'content_text', placeholder: 'memo' %>
-
+    <h3>New contents</h3>
+      <ul class="contents">
+      <%= form_with(model: @content, local: true) do |f| %>
+        <li><%= f.collection_select(:week_id, Week.all, :id, :name, {}, { id: 'content_week_id' }) %></li>
+        <li><%= f.collection_select(:media_id, Media.all, :id, :name, {}, { id: 'content_image' }) %></li>
+        <li><%= f.collection_select(:notice_id, Notice.all, :id, :name, {}, {}) %></li>
+        <li><%= f.text_area :title, id: 'content_text', placeholder: 'tittle' %></li>
+        <li><%= f.text_area :url, id: 'content_text', placeholder: 'URL' %></li>
+        <li><%= f.text_area :episode, id: 'content_text', placeholder: 'memo' %></li>
+      </ul>
       <%= f.submit 'SEND' %>
     <% end %>
   </div>
