@@ -16,8 +16,13 @@
 @import "reset";
 @import "variables";
 @import "contents";
+
+@import "header";
+@import "users";
+
 @import "header_footer";
 @import "index";
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
 * {
   font-family: "Roboto Condensed", "Noto Sans JP", sans-serif;
