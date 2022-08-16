@@ -1,7 +1,6 @@
-.contents {
-  width: 100%;
-  height: 1000px;
-
+ #index_top {
+  margin: 50px 0 100px 0;
+  
   .user_out {
     height: 500px;
     display: flex;
@@ -18,6 +17,7 @@
     }
   }
 
+
   h1 {
     font-family: "Train One", cursive;
     font-size: 50px;
@@ -25,14 +25,40 @@
   }
 
   .content_list {
+    margin: 50px;
+    position: relative;
+    padding: 1.5rem 2.5rem;
+    border: 4px solid #000;
+
     display: flex;
     align-items: center;
+    height: 100px;
+  }
+  
+  .content_list:before {
+    position: absolute;
+    pointer-events: none;
+    top: 4px;
+    left: 4px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    content: "";
+    border: 4px dotted #000;
+  }
+
+  h1 {
+    font-family: "Train One", cursive;
+    font-size: 50px;
     height: 100px;
   }
 
   p {
     font-size: 30px;
     margin-left: 20px;
+
+    i {
+      font-size: 25px;
+    }
   }
 
   .content_item {
@@ -58,8 +84,12 @@
       text-decoration: none;
       color: #222;
       &:hover {
+
         color: rgb(113, 111, 111);
+
+        color: rgb(228, 248, 5);
       }
     }
   }
 }
+
