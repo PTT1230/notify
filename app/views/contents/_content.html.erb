@@ -1,0 +1,25 @@
+<h1>HELLO!<%= current_user.nickname %></h1>
+  <% @contents.each do |content| %>
+    <% if current_user.id == content.user_id %>
+      <div class="content_list">
+      <p><%= content.title %></p>
+        <% if content.notice.id == 2 %>
+          <p><i class="fa-solid fa-heart faa-pulse animated-hover faa-fast" style="color:red;"></i></p>
+        <% else %>
+          <p><i class="fa-regular fa-bell-slash faa-wrench animated-hover"></i></p>
+        <% end %>
+        <div class="content_item">
+          <ul>
+            <li><%= content.media.name %></li>
+            <li><%= content.week.name %></li>
+          </ul>
+        </div>
+        <div class="more_link">
+          <ul>
+            <li><%= link_to 'change', edit_content_path(content.id), method: :get, class:"link" %></li>
+            <li><%= link_to 'delete', content_path(content.id), method: :delete, class:"link" %></li>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  <% end %>

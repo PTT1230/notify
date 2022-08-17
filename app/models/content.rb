@@ -7,7 +7,7 @@ class Content < ApplicationRecord
   belongs_to_active_hash :notice
   belongs_to :user
 
-  validates :title,     presence: true
+  validates :title,     {presence: true, length: { maximum: 15 }}
 
   validates :media_id,  numericality: { other_than: 1, message: "can't be blank" }
   validates :week_id,   numericality: { other_than: 1, message: "can't be blank" }
