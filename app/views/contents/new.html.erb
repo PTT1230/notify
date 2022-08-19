@@ -1,15 +1,17 @@
-<div class="contents row">
+<div id="new_content">
+  <h2>マイリストを登録しよう！</h2>
   <div class="container">
-    <h3></h3>
-    <%= form_with(model: @content, local: true) do |f| %>
-      <%= f.collection_select(:week_id, Week.all, :id, :name, {}, { id: 'content_week_id' }) %>
-      <%= f.collection_select(:media_id, Media.all, :id, :name, {}, { id: 'content_image' }) %>
-      <%= f.collection_select(:notice_id, Notice.all, :id, :name, {}, {}) %>
-      <%= f.text_area :title, id: 'content_text', placeholder: 'tittle' %>
-      <%= f.text_area :url, id: 'content_text', placeholder: 'URL' %>
-      <%= f.text_area :episode, id: 'content_text', placeholder: 'memo' %>
-
-      <%= f.submit 'SEND' %>
+    <h1>Subscribe to My List!</h1>
+      <ul class="contents">
+      <%= form_with(model: @content, local: true) do |f| %>
+        <li>曜日<br><%= f.collection_select(:week_id, Week.all, :id, :name, {}, { id: 'pullbown'}) %></li>
+        <li>メディア<br><%= f.collection_select(:media_id, Media.all, :id, :name, {}, { id: 'pullbown'}) %></li>
+        <li>通知<br><%= f.collection_select(:notice_id, Notice.all, :id, :name, {}, { id: 'pullbown'}) %></li>
+        <li><%= f.text_area :title, id: 'content_text', placeholder: 'title' %></li>
+        <li><%= f.text_area :url, id: 'content_text', placeholder: 'URL' %></li>
+        <li><%= f.text_area :episode, id: 'content_text', placeholder: 'memo', class: 'text_memo' %></li>
+      </ul>
+      <%= f.submit 'SEND',class: 'submit' %>
     <% end %>
   </div>
 </div>
