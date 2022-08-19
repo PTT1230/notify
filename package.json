@@ -19,6 +19,9 @@
     "stylelint-scss": "^4.3.0",
     "webpack-dev-server": "^4.9.3"
   },
+  "engines" : {
+    "node": "14.x.x"
+  },
   "scripts": {
     "lint:stylesheet": "stylelint --fix **/*.{css,scss}"
   }
