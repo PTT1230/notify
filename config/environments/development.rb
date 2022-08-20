@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.configure do
-  # config.hosts.clear
-  config.hosts << '5b5f-240b-10-8581-c200-e561-a207-4dd9-1e31.jp.ngrok.io'
+  #config.hosts << "70d4-240b-10-8581-c200-a0de-fc13-5a61-ea80.jp.ngrok.io"
+
+  config.hosts << "notify-38221.herokuapp.com"
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
