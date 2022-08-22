@@ -1,6 +1,7 @@
-# frozen_string_literal: true
-
 Rails.application.routes.draw do
+
+  post '/callback' => 'linebot#callback'
+  
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks'
   }

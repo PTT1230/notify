@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.configure do
-  #config.hosts << "70d4-240b-10-8581-c200-a0de-fc13-5a61-ea80.jp.ngrok.io"
+  config.hosts.clear
 
-  config.hosts << "notify-38221.herokuapp.com"
+  #config.hosts << "notify-38221.herokuapp.com"
 
   # Settings specified here will take precedence over those in config/application.rb.
 
