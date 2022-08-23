@@ -37,7 +37,7 @@ class LinebotController < ApplicationController
           userId = event['source']['userId']  
           user = User.find_by(uid: userId)
           user.destroy if user.present?
-        end
+
         end
       end
     }

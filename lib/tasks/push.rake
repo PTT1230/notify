@@ -1,10 +1,10 @@
 namespace :push_line do 
-  desc "LINEBOT:ゴミ出しの通知" 
-  task push_line_message_trash: :environment do
-      trash_day = TrashDay.new
+  desc "LINEBOT:今日の番組の通知" 
+  task push_line_message_schedule: :environment do
+    schedule_day = Schedule.new
       message = {
           type: 'text',
-          text: trash_day.text
+          text: schedule_day.text
       }
       client = Line::Bot::Client.new { |config|
           config.channel_secret = ENV["LINE_CHANNEL_SECRET"]
