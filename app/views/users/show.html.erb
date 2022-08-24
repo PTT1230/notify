@@ -1,6 +1,5 @@
 <div id="mylist_show">
   <% if user_signed_in? %>
-    <h1><%= "#{current_user.nickname} 's Lists" %></h1>
     <div class="lists">
     <% @contents.each do |content| %>
       <% if current_user.id == content.user_id %>
