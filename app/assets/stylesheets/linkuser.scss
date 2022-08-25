@@ -1,4 +1,28 @@
 #line_link {
+  margin: 30px 0;
+  .line-btn {
+    background:url('btn_login_base.png');
+    display: block;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    &:hover {
+    background:url('btn_login_hover.png');
+    display: block;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+    &:active {
+      background-image: url('btn_login_press.png');
+      display: block;
+      height: 64px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 
   .a.btn-border {
     border-radius: 0;

@@ -1,8 +1,8 @@
 <div id=line_link>
   <%- if devise_mapping.omniauthable? %>
     <%- resource_class.omniauth_providers.each do |provider| %>
-      <%= link_to image_tag("btn_login_base.png", class:"a btn btn-border"), omniauth_authorize_path(resource_name, provider), method: :post %><br>
-    <%#= link_to "LINE Login", user_line_omniauth_callback_path %>
+      <%#= link_to image_tag("btn_login_base.png", class:"line-btn"), omniauth_authorize_path(resource_name, provider), method: :post %><br>
+    <%= link_to "", omniauth_authorize_path(resource_name, provider), method: :post, class:"line-btn" %><br>
     <% end %>
   <% end %>
   <%- if controller_name != 'sessions' %>
