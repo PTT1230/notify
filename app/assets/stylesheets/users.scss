@@ -1,10 +1,12 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 /*========= ログイン ===============*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
 #sign_in {
-  height: 700px;
+  height: 1000px;
   display: flex;
   justify-content: center;
 
@@ -19,7 +21,7 @@
   h2 {
     font-size: 50px;
     margin: 30px 0;
-    font-family: "Train One", cursive;
+    
   }
   .field {
     font-size: 30px;
@@ -97,12 +99,87 @@
     opacity: 1; /*チェック後表示*/
   }
 
-  input[type="submit"] {
-    font-size: 50px;
-    margin-top: 20px;
-    &:hover {
-      color: rgb(113, 111, 111);
-    }
+  .actions {
+    margin-top: 40px;
+  }
+  /* Sign In ボタンのデザイン */
+  .btn,
+  .a.btn,
+  input[type="submit"].btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+  }
+  
+  .a.btn-gradient {
+    font-weight: normal;
+    border-radius: 100vh;
+    color: #fff;
+    border-radius: 100vh;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(40%, #ff3cac),
+      to(#562b7c)
+    );
+    background-image: -webkit-linear-gradient(left, #ff3cac 40%, #562b7c 100%);
+    background-image: linear-gradient(90deg, #ff3cac 40%, #562b7c 100%);
+  }
+  
+  .a.btn-gradient:after {
+    position: absolute;
+    border-radius: 100vh;
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 100%;
+  
+    content: "";
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#ff3cac),
+      color-stop(#562b7c),
+      to(#2b86c5)
+    );
+    background-image: -webkit-linear-gradient(left, #ff3cac, #562b7c, #2b86c5);
+    background-image: linear-gradient(90deg, #ff3cac, #562b7c, #2b86c5);
+  }
+  
+  .a.btn-gradient.span {
+    position: relative;
+    border-radius: 100vh;
+  }
+  
+  .a.btn-gradient:hover {
+    border-radius: 100vh;
+    color: #fff;
+  }
+  
+  .a.btn-gradient:hover:after {
+    border-radius: 100vh;
+    opacity: 0;
   }
 }
 
