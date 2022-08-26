@@ -1,3 +1,7 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
 /*========= ログイン ===============*/
 *,
 *:before,
@@ -5,10 +9,21 @@
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
+
 #sign_in {
   height: 1000px;
   display: flex;
   justify-content: center;
+  position: relative;
+  background-color: #212529;
+  
+  .background {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
 
   .container {
     text-align: center;

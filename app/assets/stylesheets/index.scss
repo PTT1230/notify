@@ -47,21 +47,9 @@
       opacity: 0;
     }
   }
-
   .loaded {
     opacity: 0;
     visibility: hidden;
-  }
-
-  .gallery {
-    display: grid;
-    gap: .5rem;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
   }
 
 /*<!-- ログイン前 -->*/
@@ -74,9 +62,9 @@
     .user_link {
       font-size: 100px;
       text-decoration: none;
-      color: #222;
+      color: #f8fefe;
       &:hover {
-        color: #f8fefe;
+        color: #222;
       }
     }
   }
