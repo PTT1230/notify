@@ -6,6 +6,7 @@
     height: 64px;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
     
     &:hover {
     background:url('btn_login_hover.png');
@@ -26,7 +27,7 @@
 
   .a.btn-border {
     border-radius: 0;
-    color: #121212;
+    color: whitesmoke;
     margin: 20px 0;
   }
 
@@ -39,7 +40,7 @@
     content: '';
     -webkit-transition: all .3s;
     transition: all .3s;
-    background: #121212;
+    background: whitesmoke;
   }
 
   .a.btn-border:before {
