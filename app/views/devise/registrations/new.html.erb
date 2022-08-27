@@ -1,7 +1,10 @@
+
 <div id="sign_up">
   <div class="container">
+
     <h1>Let's get started!</h1>
     <h2>Create email account</h2>
+
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <%= render 'devise/shared/error_messages', resource: resource %>
 
@@ -35,3 +38,4 @@
     <% end %>
   </div>
 </div>
+
