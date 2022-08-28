@@ -1,13 +1,13 @@
-<h1>HELLO!<%= current_user.nickname %></h1>
+<div id="userContents">
   <% @contents.each do |content| %>
     <% if current_user.id == content.user_id %>
       <div class="content_list">
-      <p><%= content.title %></p>
-        <% if content.notice.id == 2 %>
-          <p><i class="fa-solid fa-heart faa-pulse animated-hover faa-fast" style="color:red;"></i></p>
-        <% else %>
-          <p><i class="fa-regular fa-bell-slash faa-wrench animated-hover"></i></p>
-        <% end %>
+        <p><%= content.title %></p>
+          <% if content.notice.id == 2 %>
+            <p><i class="fa-solid fa-heart faa-pulse animated-hover faa-fast"></i></p>
+          <% else %>
+            <p><i class="fa-regular fa-bell-slash faa-wrench animated-hover"></i></p>
+          <% end %>
         <div class="content_item">
           <ul>
             <li><%= content.media.name %></li>
@@ -23,3 +23,4 @@
       </div>
     <% end %>
   <% end %>
+</div>

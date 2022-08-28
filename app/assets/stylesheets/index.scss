@@ -3,17 +3,19 @@
   background-color: #e74c3c;
   animation: bg-color 10s infinite;
   @keyframes bg-color {
-    0% { background-color: #e74c3c; }
-    20% { background-color: #f1c40f; }
-    40% { background-color: #1abc9c; }
-    60% { background-color: #3498db; }
-    80% { background-color: #9b59b6; }
-    100% { background-color: #e74c3c; }
+    0% { background-color: #e73c7e; }
+    20% { background-color: #9b59b6; }
+    40% { background-color: #23a6d5; }
+    60% { background-color: #23d5ab; }
+    80% { background-color: #f6cc63; }
+    100% { background-color: #e73c7e; }
   }
+
   header {
     background-color: transparent;
     height: 120px;
   }
+
   footer {
     background-color: transparent;
   }
@@ -31,6 +33,7 @@
     left: 0;
     z-index: 9999;
   }
+
   .spinner {
     width: 100px;
     height: 100px;
@@ -53,9 +56,9 @@
     visibility: hidden;
   }
 
-/*<!-- ログイン前 -->*/
+  /*<!-- ログイン前 -->*/
   .user_out {
-    height: 600px;
+    height: 400px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -70,26 +73,52 @@
     }
   }
 
+  /*アニメーション要素のスタイル*/
+  .animation {
+    opacity : 0;
+    visibility: hidden;
+    transition: 1s;
+    transform: translateY(100px);
+    margin-top: 20px;
+    font-size: 50px;
+    color: #f8fefe;
+  }
+.index {
+  margin-top: 250px;
+}
+  /*アニメーション要素までスクロールした時のスタイル*/
+  .active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/*<!-- ログイン前・後両方 -->*/
+#userContents {
+  margin-top: 200px;
+
   h1 {
-    margin-top: 100px;
     font-size: 50px;
     height: 100px;
     color: whitesmoke;
     letter-spacing: 5px;
     margin-left: 30px;
+    text-align: center;
   }
 
+/*<!-- ログイン後 -->*/
   .content_list {
     margin: 50px;
     position: relative;
     padding: 1.5rem 2.5rem;
-    border: 4px solid #000;
-
+    border: 4px solid rgba(177, 176, 179, 0.422);
     display: flex;
     align-items: center;
     height: 100px;
+    background-color: rgba(243, 245, 246, 0.422);
   }
-  
+
   .content_list:before {
     position: absolute;
     pointer-events: none;
@@ -98,15 +127,16 @@
     width: calc(100% - 8px);
     height: calc(100% - 8px);
     content: "";
-    border: 4px dotted #000;
+    border: 4px dotted rgba(72, 72, 73, 0.422);
   }
 
   .content_list p {
     font-size: 30px;
     margin-left: 20px;
-
+    color: rgba(72, 72, 73, 0.422);
     i {
       font-size: 25px;
+      color: rgba(72, 72, 73, 0.422);
     }
   }
 
@@ -119,6 +149,7 @@
     }
     li {
       font-size: 20px;
+      color: rgba(72, 72, 73, 0.422);
     }
   }
 
@@ -131,30 +162,10 @@
     .link {
       font-size: 20px;
       text-decoration: none;
-      color: #222;
+      color: rgba(72, 72, 73, 0.422);;
       &:hover {
-
-        color: rgb(113, 111, 111);
-
-        color: rgb(228, 248, 5);
+        color: rgba(20, 20, 20, 0.62);
       }
     }
   }
-  /*アニメーション要素のスタイル*/
-  .animation {
-    opacity : 0;
-    visibility: hidden;
-    transition: 1s;
-    transform: translateY(100px);
-    margin-top: 60px;
-    font-size: 50px;
-    color: #f8fefe;
-  }
-  /*アニメーション要素までスクロールした時のスタイル*/
-  .active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  
 }

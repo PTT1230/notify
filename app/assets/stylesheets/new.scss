@@ -1,29 +1,29 @@
 #new_content {
   height: 1100px;
-  background-color: khaki;
+  background-color: #cbcbcb;
 
   h2 {
+    text-align: center;
     font-size: 50px;
     color: whitesmoke;
     padding-left: 30px;
-
     /* 上から */
     animation-name:fadeDownAnime;
     animation-duration:0.5s;
     animation-fill-mode:forwards;
     opacity:0;
     
-    @keyframes fadeDownAnime{
-      from {
-        opacity: 0;
-      transform: translateY(0);
-      }
-      to {
-        opacity: 1;
-      transform: translateY(100px);
-      }
+  @keyframes fadeDownAnime{
+    from {
+      opacity: 0;
+    transform: translateY(0);
+    }
+    to {
+      opacity: 1;
+    transform: translateY(100px);
     }
   }
+}
 
   h1 {
     padding-top: 150px;
@@ -58,7 +58,9 @@
   .contents {
     margin-bottom: 50px;
     width: 500px;
-
+    background-color: hsla(0,0%,100%,.7);
+    padding: 0 30px;
+    margin-top: 30px;
     /* 下から */
     animation-name:fadeUpAnime;
     animation-duration:0.5s;
@@ -83,19 +85,24 @@
     list-style: none;
     margin: 30px 0;
     font-size: 20px;
+    color: #3e3e3e;
+    mix-blend-mode: hard-light;
   }
 
   #pullbown {
     width: 100%;
     text-align: center;
-
+    color: #3e3e3e;
+    mix-blend-mode: hard-light;
   }
 
   #content_text {
     text-align: center;
-    border: 4px solid #cccccc;
+    border: 4px solid #3e3e3e;
     border-radius: 6px;
     width: 100%;
+    color: #3e3e3e;
+    mix-blend-mode: hard-light;
   }
 
   .text_memo {

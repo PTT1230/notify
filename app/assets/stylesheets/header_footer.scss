@@ -1,10 +1,14 @@
 /*========= ヘッダー ===============*/
 
 header {
-  /*background-color:  rgba(0,0,255,0); */
-  background-color: #212529;
+  background-color:  rgba(0,0,255,0);
+  /*background-color: #212529; */
   height: 120px;
   display: flex;
+  width: 100vw;
+  top:0px;
+  position: fixed;
+  z-index : 2;
 
   h1 a {
     font-family: "Train One", cursive;
@@ -70,7 +74,7 @@ header {
 footer {
   width: 100%;
   height: 60px;
-  background-color: #212529;
+  background-color:  rgba(0,0,255,0);
   bottom: 0; /* 上部から配置の基準位置を決める */
   left: 0; /* 左から配置の基準位置を決める */
   position:fixed;
@@ -81,4 +85,4 @@ footer {
   }
 }
 
-/*osition: fixed; /* フッターを固定する */
+/*position: fixed; /* フッターを固定する */
