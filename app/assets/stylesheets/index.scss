@@ -18,6 +18,7 @@
     background-color: transparent;
   }
 }
+
 #index_top {
 /*<!-- ローディング画面 -->*/
   #loading {
@@ -100,7 +101,7 @@
     border: 4px dotted #000;
   }
 
-  p {
+  .content_list p {
     font-size: 30px;
     margin-left: 20px;
 
@@ -145,6 +146,9 @@
     visibility: hidden;
     transition: 1s;
     transform: translateY(100px);
+    margin-top: 60px;
+    font-size: 50px;
+    color: #f8fefe;
   }
   /*アニメーション要素までスクロールした時のスタイル*/
   .active {
@@ -152,9 +156,5 @@
     visibility: visible;
     transform: translateY(0);
   }
-  p {
-    margin-top: 60px;
-    font-size: 50px;
-    color: #f8fefe;
-  }
+  
 }

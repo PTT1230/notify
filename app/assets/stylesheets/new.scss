@@ -1,16 +1,52 @@
 #new_content {
   height: 1100px;
-
+  background-color: khaki;
 
   h2 {
-    margin: 60px 0;
-    font-size: 40px;
+    font-size: 50px;
     color: whitesmoke;
+    padding-left: 30px;
+
+    /* 上から */
+    animation-name:fadeDownAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    
+    @keyframes fadeDownAnime{
+      from {
+        opacity: 0;
+      transform: translateY(0);
+      }
+      to {
+        opacity: 1;
+      transform: translateY(100px);
+      }
+    }
   }
 
   h1 {
-    font-size: 50px;
+    padding-top: 150px;
+    font-size: 70px;
     color: whitesmoke;
+
+    /* 下から */
+    animation-name:fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    animation-delay: 1s;
+  
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+      transform: translateY(100px);
+      }
+      to {
+        opacity: 1;
+      transform: translateY(0);
+      }
+    }
   }
 
   .container {
@@ -18,9 +54,28 @@
     flex-direction:column;
     align-items: center;
   }
+
   .contents {
     margin-bottom: 50px;
     width: 500px;
+
+    /* 下から */
+    animation-name:fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    animation-delay: 2s;
+
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+      transform: translateY(100px);
+      }
+      to {
+        opacity: 1;
+      transform: translateY(0);
+      }
+    }
   }
 
   li {
