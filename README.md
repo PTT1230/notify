@@ -37,3 +37,6 @@
 - yarn lint:stylesheet
 - erblint --lint-all -a
 - bundle exec rubocop -a
+
+# URL
+https://notify-38221.herokuapp.com/
