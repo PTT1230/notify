@@ -6,13 +6,37 @@
     <title>Notify</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <script src="https://kit.fontawesome.com/97d23cb30f.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/97d23cb30f.js" crossorigin="anonymous"></script>
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" defer></script>
   </head>
   <body>
+    <div id="cursor"></div>
+<div id="stalker"></div>
+    </div>
     <%= render 'layouts/header' %>
     <%= yield %>
     <%= render 'layouts/footer' %>
+
+    <%# ヘッダースクロール下非表示%>
+      <script>
+        $(function () {
+          var hd_size = $('header').innerHeight(); //ヘッダーの高さを取得
+          var pos = 0;
+          $(window).on('scroll', function () {
+            var current_pos = $(this).scrollTop(); //現在の位置を取得
+            if (current_pos < pos || current_pos == 0) { //上にスクロール もしくは 最上部
+              $('header').css({ 'top': 0 }); //ヘッダーを表示
+            } else {
+              $('header').css({ 'top': '-' + hd_size + 'px' }); //ヘッダーを非表示(下にスクロール)
+            }
+            pos = current_pos;
+          });
+        });
+      </script>
+
   </body>
 </html>

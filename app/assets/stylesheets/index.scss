@@ -1,14 +1,14 @@
 /*<!-- トップ画面グラデーション -->*/
 #bodyindex {
-  background-color: #e74c3c;
+  background-color: #fc8b7fd4;
   animation: bg-color 10s infinite;
   @keyframes bg-color {
-    0% { background-color: #e73c7e; }
-    20% { background-color: #9b59b6; }
-    40% { background-color: #23a6d5; }
-    60% { background-color: #23d5ab; }
-    80% { background-color: #f6cc63; }
-    100% { background-color: #e73c7e; }
+    0% { background-color: #ff629eb0; }
+    20% { background-color: #be6bdeb1; }
+    40% { background-color: #57d0fbb5; }
+    60% { background-color: #50f0cbba; }
+    80% { background-color: #fee197cf; }
+    100% { background-color: #ff629eb0; }
   }
 
   header {
@@ -84,7 +84,7 @@
     color: #f8fefe;
   }
 .index {
-  margin-top: 250px;
+  padding-top: 250px;
 }
   /*アニメーション要素までスクロールした時のスタイル*/
   .active {
@@ -106,6 +106,7 @@
     margin-left: 30px;
     text-align: center;
   }
+
 
 /*<!-- ログイン後 -->*/
   .content_list {

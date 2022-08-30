@@ -1,5 +1,7 @@
-<div id="mylist_show">
-  <% if user_signed_in? %>
+<% if user_signed_in? %>
+  <div id="mylist_show">
+    <h1>あなたの視聴一覧です</h1>
+    <h2>Here is your list</h2>
     <div class="lists">
     <% @contents.each do |content| %>
       <% if current_user.id == content.user_id %>
@@ -10,9 +12,9 @@
             <%= content.notice.name %>
           <div class="more_list">
             <%= link_to edit_content_path(content.id), method: :get, class:"link_list" do %>
-            <i class="fa-solid fa-pen-to-square" style="color:black;"></i><% end %>
+            <i class="fa-solid fa-pen-to-square"></i><% end %>
             <%= link_to content_path(content.id), method: :delete, class:"link_list" do %>
-            <i class="fa-solid fa-trash-can" style="color:black;"></i><% end %>
+            <i class="fa-solid fa-trash-can"></i><% end %>
           </div>
         </div>
       <% end %>
@@ -21,5 +23,5 @@
     <% if @contents.length <= 0  %>
       <p>No Lists!</p>
     <% end %>
-  <% end %>
-</div>
+  </div>
+<% end %>
