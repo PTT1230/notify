@@ -1,12 +1,11 @@
 <div id=line_link>
   <%- if devise_mapping.omniauthable? %>
     <% resource_class.omniauth_providers.each do |provider| %>
-      <%#= link_to image_tag("btn_login_base.png", class:"line-btn"), omniauth_authorize_path(resource_name, provider), method: :post %><br>
     <%= link_to "", omniauth_authorize_path(resource_name, provider), method: :post, class:"line-btn" %><br>
     <% end %>
   <% end %>
   <%- if controller_name != 'sessions' %>
-    <%= link_to 'Log in', new_session_path(resource_name), class:"a btn btn-border"%><br>
+    <%= link_to 'ログインページはこちら', new_session_path(resource_name), class:"a btn btn-border"%><br>
   <% end %>
 
   <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
