@@ -1,4 +1,5 @@
 <div id="userContents">
+  <h2 class="userlist">Lists</h2>
   <% @contents.each do |content| %>
     <% if current_user.id == content.user_id %>
       <div class="content_list">

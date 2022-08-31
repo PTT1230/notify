@@ -1,16 +1,17 @@
 <div id="content_edit">
   <h2>My listの編集</h2>
-    <h1>Let's go ahead and edit!</h1>
+  <h1>Let's go ahead and edit!</h1>
+  <div class="contents">
     <div class="container">
-    <%= form_with(model: @content, local: true) do |f| %>
-      <li>タイトル<br><%= f.text_area :title, id: 'content_text', placeholder: 'title' %></li>
-      <li>メディア<br><%= f.collection_select(:media_id, Media.all, :id, :name, {}, { id: 'pullbown' }) %></li>
-      <li>曜日<br><%= f.collection_select(:week_id, Week.all, :id, :name, {}, { id: 'pullbown' }) %></li>
-      <li>通知<br><%= f.collection_select(:notice_id, Notice.all, :id, :name, {}, {id: 'pullbown'}) %></li>
-      <li>URL<br><%= f.text_area :url, id: 'content_text', placeholder: 'URL' %></li>
-      <li>メモ欄<br><%= f.text_area :episode, id: 'content_text', placeholder: 'memo' %></li>
-
-      <%= f.submit 'SEND', class: 'submit' %>
-    <% end %>
+      <%= form_with(model: @content, local: true) do |f| %>
+        <li>タイトル<br><%= f.text_area :title, id: 'content_text', placeholder: 'title' %></li>
+        <li>メディア<br><%= f.collection_select(:media_id, Media.all, :id, :name, {}, { id: 'pullbown' }) %></li>
+        <li>曜日<br><%= f.collection_select(:week_id, Week.all, :id, :name, {}, { id: 'pullbown' }) %></li>
+        <li>通知<br><%= f.collection_select(:notice_id, Notice.all, :id, :name, {}, {id: 'pullbown'}) %></li>
+        <li>URL<br><%= f.text_area :url, id: 'content_text', placeholder: 'URL' %></li>
+        <li>メモ欄<br><%= f.text_area :episode, id: 'content_text', placeholder: 'memo' %></li>
+        <%= f.submit 'SEND', class: 'submit' %>
+      <% end %>
+    </div>
   </div>
 </div>

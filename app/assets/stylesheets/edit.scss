@@ -1,43 +1,61 @@
 #content_edit {
-  height: 900px;
+  padding: 150px 0;
+  background-color: rgb(207, 205, 205);
+
+  /* 画像を常に天地左右の中央に配置 */
+  background-position: center center;
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  background-attachment: fixed;
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: cover;
 
   h2 {
     margin-top: 30px;
     font-size: 40px;
+    text-align: center;
+    color: rgba(55, 55, 55, 0.886);
   }
 
   h1 {
     text-align: center;
     font-size: 40px;
+    color: rgba(55, 55, 55, 0.886);
   }
 
   .container {
+    margin: 20px 0;
     font-size: 50px;
-    display: flex;
-    justify-content: center;
+    width: 600px;
+    background-color: rgba(247, 245, 245, 0.659);
   }
 
   .contents {
-    margin: 50px 0;
-    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
   }
 
   li {
     text-align: center;
     list-style: none;
     margin: 30px 0;
-    font-size: 20px;
+    font-size: 25px;
+
   }
 
   #pullbown {
     text-align: center;
-    width: 200px;
+    border: 3px solid #cccccc;
+    border-radius: 6px;
+    width: 550px;
+    margin-top: 10px;
   }
 
   #content_text {
     text-align: center;
     border: 3px solid #cccccc;
     border-radius: 6px;
+    width: 550px;
+    margin-top: 10px;
   }
 
   .text_memo {
@@ -49,6 +67,7 @@
     text-decoration: none;
     color: #222;
     width: 100%;
+    margin-bottom: 30px;
     &:hover {
       color: rgb(113, 111, 111);
     }

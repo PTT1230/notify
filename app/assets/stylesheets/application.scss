@@ -33,11 +33,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Roboto+Condensed:wght@700&family=Train+One&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto+Condensed:wght@700&display=swap');
 
+/*マウスカーソル*/
 body{
   position: relative;
   cursor: none; /*もともとあるカーソルは非表示に*/
 }
-
 /*カーソル要素*/
 #cursor{
   position: fixed;

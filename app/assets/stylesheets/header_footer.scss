@@ -55,14 +55,17 @@ header {
       color: rgb(113, 111, 111);
       font-size: 30px;
     }
+
     .user_out {
       display: flex;
       flex-direction: column;
     }
+
     .user_link {
       font-size: 30px;
       text-decoration: none;
       color: rgb(113, 111, 111);
+      margin-left: 10px;
       &:hover {
         color: rgb(67, 67, 67);
       }
