@@ -4,15 +4,18 @@
   <div class="container">
     <h1>Subscribe to My List!</h1>
       <ul class="contents">
-      <%= form_with(model: @content, local: true) do |f| %>
+        <%= form_with(model: @content, local: true) do |f| %>
+        <%= render 'devise/shared/error_messages', model: f.object %>
+
         <li>Week<br><%= f.collection_select(:week_id, Week.all, :id, :name, {}, { id: 'pullbown'}) %></li>
         <li>Media<br><%= f.collection_select(:media_id, Media.all, :id, :name, {}, { id: 'pullbown'}) %></li>
         <li>Notice<br><%= f.collection_select(:notice_id, Notice.all, :id, :name, {}, { id: 'pullbown'}) %></li>
         <li><%= f.text_area :title, id: 'content_text', placeholder: 'title' %></li>
         <li><%= f.text_area :url, id: 'content_text', placeholder: 'URL' %></li>
         <li><%= f.text_area :episode, id: 'content_text', placeholder: 'memo', class: 'text_memo' %></li>
+        
+        <%= f.submit 'SEND',class: 'submit' %>
       </ul>
-      <%= f.submit 'SEND',class: 'submit' %>
     <% end %>
   </div>
 </div>

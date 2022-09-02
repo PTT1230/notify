@@ -4,7 +4,7 @@ class Schedule
 
     case date.strftime('%a')
       when "Mon"
-          "今日は月曜日、月曜日の番組の通知！" + metal_text
+          "今日は月曜日、月曜日の番組の通知！"
       when "Tue"
           "今日は火曜日、火曜日の番組の通知！"
       when "Wed"

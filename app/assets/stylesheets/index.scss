@@ -124,12 +124,12 @@
     display: flex;
     align-items: flex-end;
     height: 100px;
+    justify-content: center;
     &:before {
       content: '';
       position: absolute;
-      left: 0;
       bottom: 0;
-      border-bottom: 4px solid rgba(49, 49, 50, 0.768);
+      border-bottom: 3px solid rgba(49, 49, 50, 0.768);
       animation: border_anim 3s linear forwards;
     }
     
@@ -144,13 +144,13 @@
   }
 
   /*========= タイピング ===============*/
-  p {
+  .TextTyping {
     text-align: center;
     margin: 20px 0;
     font-size: 4rem;
     letter-spacing: .2em;
     word-break : break-all;
-    color: #fff;
+    color: rgba(49, 49, 50, 0.768);
   }
   .TextTyping span {
     display: none;
@@ -180,10 +180,12 @@
     ul {
       list-style: none;
       padding: 0 30px;
+      display: flex;
     }
     li {
       font-size: 20px;
       color: rgba(49, 49, 50, 0.768);
+      margin: 0 10px;
     }
   }
 

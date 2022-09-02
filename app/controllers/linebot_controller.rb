@@ -1,21 +1,23 @@
 class LinebotController < ApplicationController
-  require 'line/bot' 
- 
+  require 'line/bot'  # gem 'line-bot-api'
+
+  # callbackアクションのCSRFトークン認証を無効
   protect_from_forgery :except => [:callback]
- 
+
   def client
     @client ||= Line::Bot::Client.new { |config|
       config.channel_secret = ENV["LINE_CHANNEL_SECRET"]
       config.channel_token = ENV["LINE_CHANNEL_TOKEN"]
     }
   end
- 
+
   def callback
     body = request.body.read
 
     signature = request.env['HTTP_X_LINE_SIGNATURE']
     unless client.validate_signature(body, signature)
-      error 400 do 'Bad Request' end
+      #%error 400 do 'Bad Request' end%
+      head :bad_request
     end
 
     events = client.parse_events_from(body)
@@ -23,7 +25,7 @@ class LinebotController < ApplicationController
     events.each { |event|
       case event
       when Line::Bot::Event::Message
-      case event.type
+        case event.type
         when Line::Bot::Event::MessageType::Text
           message = {
             type: 'text',
@@ -38,7 +40,13 @@ class LinebotController < ApplicationController
               user = User.find_by(uid: userId)
               user.destroy if user.present?
             end
+
+            message = {
+              type: 'text',
+              text: event.message['text']
+            }
           end
+      end
     }
 
     head :ok

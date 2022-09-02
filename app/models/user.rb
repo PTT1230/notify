@@ -6,7 +6,7 @@ class User < ApplicationRecord
          omniauth_providers: %i[line]
 
   has_many  :contents
-  validates :nickname, presence: true, length: { maximum: 6 }
+  validates :nickname, presence: true, length: { maximum: 10 }
 
   def social_profile(provider)
     social_profiles.select { |sp| sp.provider == provider.to_s }.first
