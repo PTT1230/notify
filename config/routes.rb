@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   root to: 'contents#index'
   resources :contents
   resources :users, only: :show
+
+  devise_scope :user do
+    get '/users', to: 'devise/registrations#new'
+  end
 end
