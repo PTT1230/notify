@@ -25,11 +25,16 @@ class ContentsController < ApplicationController
 
   def edit
     @content = Content.find(params[:id])
+    
   end
 
   def update
-    content = Content.find(params[:id])
-    redirect_to root_path if content.update(content_params)
+    @content = Content.find(params[:id])
+    if @content.update(content_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   private

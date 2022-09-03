@@ -40,6 +40,7 @@
     margin: 30px 0;
     color: whitesmoke;
   }
+
   .field {
     font-size: 30px;
     margin-top: 30px;
@@ -294,16 +295,202 @@
 /*========= エラー表示 ===============*/
 
 #error_explanation {
-  p {
-    font-size: 15px;
-    color: brown;
-  }
+  font-size: 20px;
+  color: brown;
+  text-align: center;
+
   li {
-    list-style: none;
+    margin: 10px 0;
     font-size: 15px;
-    color: brown;
   }
 }
+
 .field_with_errors {
   display: inline;
+}
+
+/*========= パスワード ===============*/
+#forgot_password {
+  height: 1300px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #212529;
+  padding-top: 150px;
+  text-align: center;
+  
+  .background {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  h2 {
+    color: whitesmoke;
+  }
+
+  .new_user {
+    color: whitesmoke;
+  }
+  .field {
+    font-size: 30px;
+    margin-top: 30px;
+    position: relative;
+    color: whitesmoke;
+  }
+
+  .input-field {
+    text-align: center;
+    color: #666464;
+  }
+
+  input[type="email"] {
+    width: 80%;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  input[type="password"] {
+    width: 80%;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  /*リセット */
+  input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  /* チェックボックスデザイン */
+  input[type="checkbox"] {
+    cursor: pointer;
+    padding-left: 30px; /*label手前にチェックボックス用の余白を開ける*/
+    vertical-align: middle;
+    position: relative;
+    margin-top: 20px;
+  }
+
+  input[type="checkbox"]::before,
+  input[type="checkbox"]::after {
+    content: "";
+    display: block;
+    position: absolute;
+  }
+
+  input[type="checkbox"]::before {
+    background-color: #fff;
+    border-radius: 0%;
+    border: 2px solid #666464;
+    width: 20px; /*チェックボックスの横幅*/
+    height: 20px; /*チェックボックスの縦幅*/
+    transform: translateY(-50%);
+    top: 50%;
+    left: 5px;
+  }
+
+  input[type="checkbox"]::after {
+    border-bottom: 3px solid #666464; /*チェックの太さ*/
+    border-left: 3px solid #666464; /*チェックの太さ*/
+    opacity: 0; /*チェック前は非表示*/
+    height: 6px; /*チェックの高さ*/
+    width: 11px; /*チェックの横幅*/
+    transform: rotate(-45deg);
+    top: -5px; /*チェック時の位置調整*/
+    left: 10px; /*チェック時の位置調整*/
+  }
+  input[type="checkbox"]:checked::after {
+    opacity: 1; /*チェック後表示*/
+  }
+
+  .actions {
+    margin-top: 40px;
+  }
+  /* Sign In ボタンのデザイン */
+  .btn,
+  .a.btn,
+  input[type="submit"].btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+  }
+  
+  .a.btn-gradient {
+    font-weight: normal;
+    border-radius: 100vh;
+    color: #fff;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(40%, #ff3cac),
+      to(#562b7c)
+    );
+    background-image: -webkit-linear-gradient(left, #ff3cac 40%, #562b7c 100%);
+    background-image: linear-gradient(90deg, #ff3cac 40%, #562b7c 100%);
+  }
+  
+  .a.btn-gradient:after {
+    position: absolute;
+    border-radius: 100vh;
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 100%;
+  
+    content: "";
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#ff3cac),
+      color-stop(#562b7c),
+      to(#2b86c5)
+    );
+    background-image: -webkit-linear-gradient(left, #ff3cac, #562b7c, #2b86c5);
+    background-image: linear-gradient(90deg, #ff3cac, #562b7c, #2b86c5);
+  }
+  
+  .a.btn-gradient.span {
+    position: relative;
+    border-radius: 100vh;
+  }
+  
+  .a.btn-gradient:hover {
+    border-radius: 100vh;
+    color: #fff;
+  }
+  
+  .a.btn-gradient:hover:after {
+    border-radius: 100vh;
+    opacity: 0;
+  }
 }

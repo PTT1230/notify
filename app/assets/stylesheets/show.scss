@@ -76,7 +76,6 @@ body {
     bottom: 0;
     border-bottom: solid 2px rgb(76, 76, 76);
     animation: border_anim 3s linear forwards;
-
   }
   
   @keyframes border_anim {
@@ -96,6 +95,12 @@ body {
   }
   i {
     color: rgb(76, 76, 76);
+      font-size: 25px;
+      text-decoration: none;
+      color: rgba(49, 49, 50, 0.768);;
+      &:hover {
+        color: rgba(255, 254, 254, 0.944);
+    }
   }
 
   .more_list {
