@@ -44,6 +44,7 @@ class LinebotController < ApplicationController
           text: event.message['text']
         }
       end
+    end
     }
     head :ok
   end
