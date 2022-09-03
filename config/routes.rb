@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   }
   root to: 'contents#index'
   resources :contents
-  resources :users, only: :show
+  resources :users, only: [:index, :show]
 end
