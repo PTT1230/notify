@@ -297,11 +297,20 @@
   font-size: 20px;
   color: brown;
   text-align: center;
+  @include mq("lg") {
+    font-size: 26px;
+  }
+  @include mq("sm") {
+    font-size: 20px;
+  }
 
   li {
     margin: 10px 0;
-    font-size: 15px;
+    font-size: 20px;
     list-style: none;
+    @include mq("sm") {
+      font-size: 20px;
+    }
   }
 }
 
