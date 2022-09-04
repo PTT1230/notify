@@ -59,6 +59,15 @@ header {
     .user_out {
       display: flex;
       flex-direction: column;
+      @include mq("sm") {
+        display: none;
+      }
+      @include mq("md") {
+        display: none;
+      }
+      @include mq("lg") {
+        display: none;
+      }
     }
 
     .user_link {
@@ -68,6 +77,12 @@ header {
       margin-left: 10px;
       &:hover {
         color: rgb(67, 67, 67);
+      }
+      @include mq("md") {
+        font-size: 50px;
+      }
+      @include mq("lg") {
+        font-size: 50px;
       }
     }
   }

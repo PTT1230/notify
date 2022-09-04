@@ -83,6 +83,10 @@
       &:hover {
         color: rgb(113, 111, 111);
       }
+      @include mq("sm") {
+        font-size: 40px;
+        height: 250px;
+      }
     }
   }
 
@@ -104,6 +108,10 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    @include mq("sm") {
+      font-size: 25px;
+    }
+    
   }
 }
 
