@@ -17,7 +17,7 @@
   position: relative;
   background-color: #212529;
   padding-top: 150px;
-  
+
   .background {
     position: absolute;
     display: block;
@@ -146,7 +146,7 @@
     color: #212529;
     border-radius: 0.5rem;
   }
-  
+
   .a.btn-gradient {
     font-weight: normal;
     border-radius: 100vh;
@@ -161,16 +161,16 @@
     background-image: -webkit-linear-gradient(left, #ff3cac 40%, #562b7c 100%);
     background-image: linear-gradient(90deg, #ff3cac 40%, #562b7c 100%);
   }
-  
+
   .a.btn-gradient:after {
     position: absolute;
     border-radius: 100vh;
     top: 0;
     left: 0;
-  
+
     width: 100%;
     height: 100%;
-  
+
     content: "";
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
@@ -185,24 +185,24 @@
     background-image: -webkit-linear-gradient(left, #ff3cac, #562b7c, #2b86c5);
     background-image: linear-gradient(90deg, #ff3cac, #562b7c, #2b86c5);
   }
-  
+
   .a.btn-gradient.span {
     position: relative;
     border-radius: 100vh;
   }
-  
+
   .a.btn-gradient:hover {
     border-radius: 100vh;
     color: #fff;
   }
-  
+
   .a.btn-gradient:hover:after {
     border-radius: 100vh;
     opacity: 0;
   }
   /*========= エラー表示 ===============*/
   .notice {
-    color:whitesmoke;
+    color: whitesmoke;
   }
   .alert {
     color: whitesmoke;
@@ -225,8 +225,8 @@
   /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
   background-size: cover;
   /* 背景画像が読み込まれる前に表示される背景のカラー */
-  background-color:rgba(230, 229, 230, 0.6);
-  background-blend-mode:lighten;
+  background-color: rgba(230, 229, 230, 0.6);
+  background-blend-mode: lighten;
 
   .container {
     text-align: center;
@@ -285,7 +285,6 @@
     margin: 40px 0 20px;
     color: #373a3c;
 
-
     &:hover {
       color: whitesmoke;
     }
@@ -319,7 +318,7 @@
   background-color: #212529;
   padding-top: 150px;
   text-align: center;
-  
+
   .background {
     position: absolute;
     display: block;
@@ -440,7 +439,7 @@
     color: #212529;
     border-radius: 0.5rem;
   }
-  
+
   .a.btn-gradient {
     font-weight: normal;
     border-radius: 100vh;
@@ -455,16 +454,16 @@
     background-image: -webkit-linear-gradient(left, #ff3cac 40%, #562b7c 100%);
     background-image: linear-gradient(90deg, #ff3cac 40%, #562b7c 100%);
   }
-  
+
   .a.btn-gradient:after {
     position: absolute;
     border-radius: 100vh;
     top: 0;
     left: 0;
-  
+
     width: 100%;
     height: 100%;
-  
+
     content: "";
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
@@ -479,17 +478,17 @@
     background-image: -webkit-linear-gradient(left, #ff3cac, #562b7c, #2b86c5);
     background-image: linear-gradient(90deg, #ff3cac, #562b7c, #2b86c5);
   }
-  
+
   .a.btn-gradient.span {
     position: relative;
     border-radius: 100vh;
   }
-  
+
   .a.btn-gradient:hover {
     border-radius: 100vh;
     color: #fff;
   }
-  
+
   .a.btn-gradient:hover:after {
     border-radius: 100vh;
     opacity: 0;

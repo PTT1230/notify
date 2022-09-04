@@ -8,22 +8,22 @@
     color: whitesmoke;
     padding-left: 30px;
     /* 上から */
-    animation-name:fadeDownAnime;
-    animation-duration:0.5s;
-    animation-fill-mode:forwards;
-    opacity:0;
-    
-  @keyframes fadeDownAnime{
-    from {
-      opacity: 0;
-    transform: translateY(0);
-    }
-    to {
-      opacity: 1;
-    transform: translateY(100px);
+    animation-name: fadeDownAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+    @keyframes fadeDownAnime {
+      from {
+        opacity: 0;
+        transform: translateY(0);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(100px);
+      }
     }
   }
-}
 
   h1 {
     padding-top: 150px;
@@ -31,52 +31,52 @@
     color: whitesmoke;
 
     /* 下から */
-    animation-name:fadeUpAnime;
-    animation-duration:0.5s;
-    animation-fill-mode:forwards;
-    opacity:0;
+    animation-name: fadeUpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
     animation-delay: 1s;
-  
-    @keyframes fadeUpAnime{
+
+    @keyframes fadeUpAnime {
       from {
         opacity: 0;
-      transform: translateY(100px);
+        transform: translateY(100px);
       }
       to {
         opacity: 1;
-      transform: translateY(0);
+        transform: translateY(0);
       }
     }
   }
 
   .container {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
   }
 
   .contents {
     margin-bottom: 50px;
     width: 500px;
-    background-color: hsla(0,0%,100%,.7);
+    background-color: hsla(0, 0%, 100%, 0.7);
     padding: 0 30px;
     margin-top: 30px;
     text-align: center;
     /* 下から */
-    animation-name:fadeUpAnime;
-    animation-duration:0.5s;
-    animation-fill-mode:forwards;
-    opacity:0;
+    animation-name: fadeUpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
     animation-delay: 2s;
 
-    @keyframes fadeUpAnime{
+    @keyframes fadeUpAnime {
       from {
         opacity: 0;
-      transform: translateY(100px);
+        transform: translateY(100px);
       }
       to {
         opacity: 1;
-      transform: translateY(0);
+        transform: translateY(0);
       }
     }
   }

@@ -3,12 +3,24 @@
   background-color: #fc8b7fd4;
   animation: bg-color 10s infinite;
   @keyframes bg-color {
-    0% { background-color: #ff629eb0; }
-    20% { background-color: #be6bdeb1; }
-    40% { background-color: #57d0fbb5; }
-    60% { background-color: #50f0cbba; }
-    80% { background-color: #fee197cf; }
-    100% { background-color: #ff629eb0; }
+    0% {
+      background-color: #ff629eb0;
+    }
+    20% {
+      background-color: #be6bdeb1;
+    }
+    40% {
+      background-color: #57d0fbb5;
+    }
+    60% {
+      background-color: #50f0cbba;
+    }
+    80% {
+      background-color: #fee197cf;
+    }
+    100% {
+      background-color: #ff629eb0;
+    }
   }
 
   header {
@@ -22,7 +34,7 @@
 }
 
 #index_top {
-/*<!-- ローディング画面 -->*/
+  /*<!-- ローディング画面 -->*/
   #loading {
     width: 100vw;
     height: 100vh;
@@ -40,14 +52,15 @@
     margin: 200px auto;
     background-color: #fff;
     border-radius: 100%;
-    animation: sk-scaleout 1.0s infinite ease-in-out;
+    animation: sk-scaleout 1s infinite ease-in-out;
   }
 
   @keyframes sk-scaleout {
     0% {
       transform: scale(0);
-    } 100% {
-      transform: scale(1.0);
+    }
+    100% {
+      transform: scale(1);
       opacity: 0;
     }
   }
@@ -75,7 +88,7 @@
 
   /*アニメーション要素のスタイル*/
   .animation {
-    opacity : 0;
+    opacity: 0;
     visibility: hidden;
     transition: 1s;
     transform: translateY(100px);
@@ -83,9 +96,9 @@
     font-size: 50px;
     color: #f8fefe;
   }
-.index {
-  padding-top: 250px;
-}
+  .index {
+    padding-top: 250px;
+  }
   /*アニメーション要素までスクロールした時のスタイル*/
   .active {
     opacity: 1;
@@ -115,8 +128,7 @@
     letter-spacing: 3px;
   }
 
-
-/*<!-- ログイン後 -->*/
+  /*<!-- ログイン後 -->*/
   .content_list {
     margin: 10px;
     position: relative;
@@ -126,31 +138,33 @@
     height: 100px;
     justify-content: center;
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       border-bottom: 3px solid rgba(49, 49, 50, 0.768);
       animation: border_anim 3s linear forwards;
     }
-    
+
     @keyframes border_anim {
-      0%{
+      0% {
         width: 0%;
       }
-      100%{
+      100% {
         width: 90%;
       }
     }
   }
-
   /*========= タイピング ===============*/
   .TextTyping {
     text-align: center;
     margin: 20px 0;
     font-size: 4rem;
-    letter-spacing: .2em;
-    word-break : break-all;
+    letter-spacing: 0.2em;
+    word-break: break-all;
     color: rgba(49, 49, 50, 0.768);
+    @include mq("md") {
+      color: blue;
+    }
   }
   .TextTyping span {
     display: none;
@@ -158,11 +172,15 @@
   /*文字列後ろの線の設定*/
   .TextTyping::after {
     content: "|";
-    animation: typinganime .8s ease infinite;
+    animation: typinganime 0.8s ease infinite;
   }
   @keyframes typinganime {
-    from{opacity:0}
-    to{opacity:1}
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   .content_list p {
@@ -199,7 +217,7 @@
     .link {
       font-size: 25px;
       text-decoration: none;
-      color: rgba(49, 49, 50, 0.768);;
+      color: rgba(49, 49, 50, 0.768);
       &:hover {
         color: rgba(255, 254, 254, 0.944);
       }

@@ -73,3 +73,21 @@ body{
 a {
   cursor: none;
 }
+
+
+//メディアクエリの記述
+$sizes: lg, md, sm;  
+
+//ブレイクポイント
+$breakpoint: ( 
+  'sm': 'screen and (max-width: 375px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 961px)',
+) !default;
+
+//mixinを定義（初期値はmd）
+@mixin mq($size: md) {
+  @media #{ map-get( $breakpoint, $size ) } {
+    @content;
+  }
+}

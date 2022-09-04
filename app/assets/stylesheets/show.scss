@@ -8,16 +8,16 @@
 
   h1 {
     margin: 50px 0 20px;
-    color :rgba(76, 76, 76, 0.9);
+    color: rgba(76, 76, 76, 0.9);
     text-align: center;
     font-size: 45px;
-    animation-name:fadeDownAnime;
+    animation-name: fadeDownAnime;
     animation-duration: 1s;
-    animation-fill-mode:forwards;
-    opacity:0;
+    animation-fill-mode: forwards;
+    opacity: 0;
     animation-delay: 1s;
-  }  
-  @keyframes fadeDownAnime{
+  }
+  @keyframes fadeDownAnime {
     from {
       opacity: 0;
       transform: translateY(-100px);
@@ -30,22 +30,22 @@
 
   h2 {
     margin: 0 0 100px;
-    color :rgba(76, 76, 76, 0.9);
+    color: rgba(76, 76, 76, 0.9);
     text-align: center;
     font-size: 60px;
-    animation-name:fadeDownAnime;
+    animation-name: fadeDownAnime;
     animation-duration: 1s;
-    animation-fill-mode:forwards;
-    opacity:0;
-  }  
-  @keyframes fadeDownAnime{
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  @keyframes fadeDownAnime {
     from {
       opacity: 0;
-    transform: translateY(-100px);
+      transform: translateY(-100px);
     }
     to {
       opacity: 1;
-    transform: translateY(100px);
+      transform: translateY(100px);
     }
   }
 
@@ -66,20 +66,20 @@
     margin-bottom: 40px;
     padding-bottom: 5px;
   }
-  .content_post:before{
-    content: '';
+  .content_post:before {
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0;
     border-bottom: solid 2px rgb(76, 76, 76);
     animation: border_anim 3s linear forwards;
   }
-  
+
   @keyframes border_anim {
-    0%{
+    0% {
       width: 0%;
     }
-    100%{
+    100% {
       width: 100%;
     }
   }
@@ -92,11 +92,11 @@
   }
   i {
     color: rgb(76, 76, 76);
-      font-size: 25px;
-      text-decoration: none;
-      color: rgba(49, 49, 50, 0.768);;
-      &:hover {
-        color: rgba(255, 254, 254, 0.944);
+    font-size: 25px;
+    text-decoration: none;
+    color: rgba(49, 49, 50, 0.768);
+    &:hover {
+      color: rgba(255, 254, 254, 0.944);
     }
   }
 
@@ -110,4 +110,3 @@
     font-size: 20px;
   }
 }
-
