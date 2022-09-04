@@ -50,10 +50,16 @@ header {
       &:hover {
         color: rgb(67, 67, 67);
       }
+      @include mq("sm") {
+        font-size: 20px;
+      }
     }
     .user_nav {
       color: rgb(113, 111, 111);
       font-size: 30px;
+      @include mq("sm") {
+        font-size: 20px;
+      }
     }
 
     .user_out {
@@ -78,13 +84,12 @@ header {
       &:hover {
         color: rgb(67, 67, 67);
       }
-      @include mq("md") {
-        font-size: 50px;
+      @include mq("sm") {
+        font-size: 20px;
       }
-      @include mq("lg") {
-        font-size: 50px;
-      }
+      
     }
+    
   }
 }
 

@@ -151,8 +151,10 @@
       bottom: 0;
       border-bottom: 3px solid rgba(49, 49, 50, 0.768);
       animation: border_anim 3s linear forwards;
+      @include mq("sm") {
+        border-bottom: 2px solid rgba(49, 49, 50, 0.768);
+      }
     }
-
     @keyframes border_anim {
       0% {
         width: 0%;
@@ -160,6 +162,16 @@
       100% {
         width: 90%;
       }
+    }
+    @include mq("lg") {
+      padding: 10px;
+      height: 100px;
+      align-items: center;
+    }
+    @include mq("sm") {
+      padding: 10px;
+      height: 50px;
+      align-items: center;
     }
   }
   /*========= タイピング ===============*/
@@ -170,8 +182,11 @@
     letter-spacing: 0.2em;
     word-break: break-all;
     color: rgba(49, 49, 50, 0.768);
-    @include mq("md") {
-      color: blue;
+    @include mq("lg") {
+      font-size: 35px;
+    }
+    @include mq("sm") {
+      font-size: 20px;
     }
   }
   .TextTyping span {
@@ -198,6 +213,21 @@
       font-size: 25px;
       color: rgba(49, 49, 50, 0.768);
       margin-left: 10px;
+      @include mq("lg") {
+        font-size: 15px;
+      }
+      @include mq("sm") {
+        font-size: 5px;
+      }
+    }
+    @include mq("lg") {
+      font-size: 20px;
+      font-weight: bold;
+      align-items: center;
+    }
+    @include mq("sm") {
+      font-size: 5px;
+      font-weight: bold;
     }
   }
 
@@ -208,11 +238,28 @@
       list-style: none;
       padding: 0 30px;
       display: flex;
+      @include mq("sm") {
+        padding: 0;
+        font-weight: bold;
+      }
+      @include mq("lg") {
+        padding: 0;
+        font-weight: bold;
+      }
     }
     li {
       font-size: 20px;
       color: rgba(49, 49, 50, 0.768);
       margin: 0 10px;
+      @include mq("lg") {
+        font-size: 15px;
+        align-items: center;
+      }
+      @include mq("sm") {
+        font-size: 5px;
+        align-items: center;
+        margin: 0 2px;
+      }
     }
   }
 
@@ -228,6 +275,13 @@
       color: rgba(49, 49, 50, 0.768);
       &:hover {
         color: rgba(255, 254, 254, 0.944);
+      }
+      @include mq("lg") {
+        font-size: 20px;
+        align-items: center;
+      }
+      @include mq("sm") {
+        font-size: 5px;
       }
     }
   }

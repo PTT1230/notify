@@ -4,12 +4,12 @@
     <% if user_signed_in? %>
       <div class="user_nav">
         <%= link_to 'New', new_content_path, class: 'post' %>
-        <div class="user_nav" ><%= current_user.nickname %>
+        <div class="user_nickname" ><%= current_user.nickname %></div>
           <ul class="user_in">
             <%= link_to 'My Page', "/users/#{current_user.id}", class: 'user_link' %>
             <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: 'user_link' %>
           </ul>
-        </div>
+        
       </div>
     <% else %>
       <ul class="user_out"> 
