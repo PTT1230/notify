@@ -150,3 +150,10 @@ ja:
         notice_id: 通知
         media_id: メディア
         week_id: 曜日
+        
+  activerecord:
+    attributes:
+      user:
+        email: メールアドレス
+        password: パスワード
+        nickname: ニックネーム
