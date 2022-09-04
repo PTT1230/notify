@@ -2,6 +2,7 @@
   <h1><a href="/">Notify</a></h1>
   <div class="header_bar">
     <% if user_signed_in? %>
+    <div class="sp_button">Menu</div>
       <div class="user_nav">
         <%= link_to 'New', new_content_path, class: 'post' %>
         <div class="user_nickname" ><%= current_user.nickname %></div>

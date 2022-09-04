@@ -51,6 +51,9 @@ body{
   pointer-events: none;/*クリックできなくなるのを防ぐため。noneで対応*/
   opacity: 0;
   transition: transform 0.1s;/*アニメーションの秒数指定*/
+  @include mq("lg") {
+    display: none;
+  }
 }
 /*ちょっと遅れてついてくるストーカー要素*/
 #stalker{
@@ -65,6 +68,9 @@ body{
   pointer-events: none;/*クリックできなくなるのを防ぐため。noneで対応*/
   opacity: 0;
   transition: transform 0.5s;/*アニメーションの秒数指定*/
+  @include mq("lg") {
+    display: none;
+  }
 }
 #cursor.active,
 #stalker.active{
@@ -91,3 +97,4 @@ $breakpoint: (
     @content;
   }
 }
+

@@ -1,6 +1,5 @@
 // Load all the channels within this directory and all subdirectories.
 // Channel files must be named *_channel.js.
-
 $(document).ready(function(){
   const spinner = $("div").filter("#loading")
   $(spinner).addClass("loaded")
@@ -16,4 +15,11 @@ $(window).scroll(function(){
    $(this).addClass("fadeInDown");
   }
  });
+});
+
+//メニューバー非表示/表示
+$(function () {
+  $('.sp_button').on('click', () => {
+      $('.user_nav').slideToggle();   
+  });
 });
