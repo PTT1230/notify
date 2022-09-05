@@ -183,10 +183,10 @@
     word-break: break-all;
     color: rgba(49, 49, 50, 0.768);
     @include mq("lg") {
-      font-size: 35px;
+      font-size: 45px;
     }
     @include mq("sm") {
-      font-size: 20px;
+      font-size: 25px;
     }
   }
   .TextTyping span {
@@ -214,7 +214,7 @@
       color: rgba(49, 49, 50, 0.768);
       margin-left: 10px;
       @include mq("lg") {
-        font-size: 15px;
+        font-size: 30px;
       }
       @include mq("sm") {
         font-size: 15px;
@@ -222,7 +222,7 @@
       }
     }
     @include mq("lg") {
-      font-size: 20px;
+      font-size: 30px;
       font-weight: bold;
       align-items: center;
     }
@@ -239,11 +239,11 @@
       list-style: none;
       padding: 0 30px;
       display: flex;
-      @include mq("sm") {
+      @include mq("lg") {
         padding: 0;
         font-weight: bold;
       }
-      @include mq("lg") {
+      @include mq("sm") {
         padding: 0;
         font-weight: bold;
       }
@@ -253,7 +253,7 @@
       color: rgba(49, 49, 50, 0.768);
       margin: 0 10px;
       @include mq("lg") {
-        font-size: 15px;
+        font-size: 25px;
         align-items: center;
       }
       @include mq("sm") {
@@ -279,7 +279,7 @@
         color: rgba(255, 254, 254, 0.944);
       }
       @include mq("lg") {
-        font-size: 20px;
+        font-size: 30px;
         align-items: center;
       }
       @include mq("sm") {

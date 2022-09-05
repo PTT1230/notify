@@ -11,22 +11,32 @@
 
   h2 {
     margin-top: 30px;
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
     color: rgba(55, 55, 55, 0.886);
+    
   }
 
   h1 {
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     color: rgba(55, 55, 55, 0.886);
+    @include mq("sm") {
+      font-size: 35px;
+    }
   }
 
   .container {
     margin: 20px 0;
     font-size: 50px;
-    width: 600px;
+    width: 900px;
     background-color: rgba(247, 245, 245, 0.659);
+    @include mq("lg") {
+      width: 700px;
+    }
+    @include mq("sm") {
+      width: 330px;
+    }
   }
 
   .contents {
@@ -45,16 +55,22 @@
     text-align: center;
     border: 3px solid #cccccc;
     border-radius: 6px;
-    width: 550px;
+    width: 650px;
     margin-top: 10px;
+    @include mq("sm") {
+      width: 90%;
+    }
   }
 
   #content_text {
     text-align: center;
     border: 3px solid #cccccc;
     border-radius: 6px;
-    width: 550px;
+    width: 650px;
     margin-top: 10px;
+    @include mq("sm") {
+      width: 90%;
+    }
   }
 
   .text_memo {
