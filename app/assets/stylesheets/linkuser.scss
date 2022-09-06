@@ -1,5 +1,6 @@
 #line_link {
   margin: 30px 0;
+
   .line-btn {
     background: url("btn_login_base.png");
     display: block;
@@ -31,6 +32,10 @@
     color: whitesmoke;
     margin: 15px 0;
     font-size: 30px;
+    @include mq("sm") {
+      margin: 0;
+      font-size: 20px;
+    }
   }
 
   .a.btn-border:before,

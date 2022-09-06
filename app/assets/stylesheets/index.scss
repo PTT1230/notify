@@ -243,10 +243,6 @@
         padding: 0;
         font-weight: bold;
       }
-      @include mq("sm") {
-        padding: 0;
-        font-weight: bold;
-      }
     }
     li {
       font-size: 20px;
