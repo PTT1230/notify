@@ -158,3 +158,4 @@ ja:
         password: パスワード
         password_confirmation: パスワード(確認用)
         nickname: ニックネーム
+        current_password: 現在のパスワード

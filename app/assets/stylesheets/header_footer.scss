@@ -3,7 +3,7 @@
 header {
   background-color: rgba(0, 0, 255, 0);
   /*background-color: #212529; */
-  height: 120px;
+
   display: flex;
   width: 100vw;
   top: 0px;
@@ -12,6 +12,7 @@ header {
   transition: all 0.3s ease;
 
   h1 a {
+    //font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
     font-family: "Train One", cursive;
     color: rgb(113, 111, 111);
     text-decoration: none;
@@ -97,6 +98,7 @@ header {
       text-decoration: none;
       color: rgb(113, 111, 111);
       margin-left: 10px;
+      display: block;
       &:hover {
         color: rgb(67, 67, 67);
       }
