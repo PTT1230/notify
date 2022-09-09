@@ -314,7 +314,7 @@
 
 #error_explanation {
   font-size: 20px;
-  color: brown;
+  color: #561414;
   text-align: center;
   @include mq("lg") {
     font-size: 26px;
@@ -327,6 +327,7 @@
     margin: 10px 0;
     font-size: 20px;
     list-style: none;
+    color: #5b1414;
     @include mq("sm") {
       font-size: 18px;
     }

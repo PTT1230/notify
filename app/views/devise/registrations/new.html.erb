@@ -7,7 +7,7 @@
       <%= render 'devise/shared/error_messages', model: f.object %>
 
       <div class="field">
-        <%= f.label :nickname %> <em>(最大６文字)</em><br>
+        <%= f.label :nickname %> (最大６文字)<br>
         <%= f.text_field :nickname, autofocus: true, maxlength: '6', placeholder: "--Nickname--", class: 'input-field' %>
       </div>
 
@@ -19,7 +19,7 @@
       <div class="field">
         <%= f.label :password %>
         <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> 文字以上)</em>
+          (<%= @minimum_password_length %> 文字以上)
         <% end %><br>
         <%= f.password_field :password, autocomplete: 'off', placeholder: "--Password--", class: 'input-field' %>
       </div>
