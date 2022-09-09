@@ -78,7 +78,7 @@
     appearance: none;
   }
 
-  /* チェックボックスデザイン */
+  /*========= チェックボックスデザイン =========*/
   input[type="checkbox"] {
     cursor: pointer;
     padding-left: 30px; /*label手前にチェックボックス用の余白を開ける*/
@@ -122,7 +122,7 @@
   .actions {
     margin-top: 40px;
   }
-  /* Sign In ボタンのデザイン */
+  /*========= Sign In ボタンのデザイン =========*/
   .btn,
   .a.btn,
   input[type="submit"].btn {
@@ -202,7 +202,7 @@
   }
   /*========= エラー表示 ===============*/
   .notice {
-    color: whitesmoke;
+    opacity: 0;
   }
   .alert {
     color: whitesmoke;
@@ -386,7 +386,7 @@
     font-size: 20px;
   }
 
-  /*リセット */
+  /*=========リセット =========*/
   input[type="checkbox"] {
     margin: 0;
     padding: 0;
@@ -399,7 +399,7 @@
     appearance: none;
   }
 
-  /* チェックボックスデザイン */
+  /*========= チェックボックスデザイン =========*/
   input[type="checkbox"] {
     cursor: pointer;
     padding-left: 30px; /*label手前にチェックボックス用の余白を開ける*/
@@ -443,7 +443,7 @@
   .actions {
     margin-top: 40px;
   }
-  /* Sign In ボタンのデザイン */
+  /*========= Sign In ボタンのデザイン =========*/
   .btn,
   .a.btn,
   input[type="submit"].btn {

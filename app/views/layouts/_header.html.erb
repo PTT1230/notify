@@ -5,12 +5,12 @@
     <div class="sp_button">Menu</div>
       <div class="user_nav">
         <div class="user_nickname" ><%= current_user.nickname %></div>
+        <%= link_to 'Add Content', new_content_path, class: 'post' %>
           <ul class="user_in">
-            <%= link_to 'My Page', "/users/#{current_user.id}", class: 'user_link' %>
+            <%= link_to 'My List', "/users/#{current_user.id}", class: 'user_link' %>
+            <%= link_to "User Edit", edit_user_registration_path, class: 'user_link' %>
             <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: 'user_link' %>
-            <%= link_to "Edit", edit_user_registration_path, class: 'user_link' %>
           </ul>
-        <%= link_to 'New', new_content_path, class: 'post' %>
       </div>
     <% else %>
       <ul class="user_out"> 
