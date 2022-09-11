@@ -7,6 +7,20 @@
 - レスポンシブ対応しているのでスマホからもご確認いただける
 - LINEで連携することで放送日にLINEでおしらせする(今後実装予定)
 
+# DEMO
+## トップページ
+https://user-images.githubusercontent.com/108722053/189515199-ca6aca40-42bd-4105-92c0-023dc02347b7.mp4
+
+## ログインページ
+https://user-images.githubusercontent.com/108722053/189515752-6bd62173-8909-4098-9d13-a9350e8a29f4.mp4
+
+## LINEログイン
+https://user-images.githubusercontent.com/108722053/189515870-39e252b8-8ede-4101-8187-e144bca3c67d.mp4
+
+## コンテンツ登録ページ
+https://user-images.githubusercontent.com/108722053/189517162-d8da0c9e-0a05-4217-abf3-972f86f7eedf.mp4
+
+
 # 本番環境
 ## URL
 https://notify-38221.herokuapp.com/
@@ -62,7 +76,6 @@ https://notify-38221.herokuapp.com/
 
 
 # テーブル設計
-
 ## users テーブル
 
 | Column                | Type    | Options                   |
@@ -70,7 +83,6 @@ https://notify-38221.herokuapp.com/
 | email                 | string  | null: false, unique: true |
 | encrypted_password    | string  | null: false               |
 | nickname              | string  | null: false               |
-
 
 ### Association
 
@@ -87,7 +99,6 @@ https://notify-38221.herokuapp.com/
 | notify             | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
-
 ### Association
 
 - belongs_to :user
@@ -98,4 +109,3 @@ https://notify-38221.herokuapp.com/
 - yarn lint:stylesheet
 - erblint --lint-all -a
 - bundle exec rubocop -a
-
