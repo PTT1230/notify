@@ -1,42 +1,3 @@
-# テーブル設計
-
-## users テーブル
-
-| Column                | Type    | Options                   |
-| --------------------- | ------- | ------------------------- |
-| email                 | string  | null: false, unique: true |
-| encrypted_password    | string  | null: false               |
-| nickname              | string  | null: false               |
-
-
-### Association
-
-- has_many :contents
-
-
-## contents テーブル
-
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| title              | string     | null: false                    |
-| media              | integer    | null: false                    |
-| week               | integer    | null: false                    |
-| notify             | integer    | null: false                    |
-| user               | references | null: false, foreign_key: true |
-
-
-### Association
-
-- belongs_to :user
-
-
-## lintのcheck用
-
-- yarn lint:stylesheet
-- erblint --lint-all -a
-- bundle exec rubocop -a
-
-
 # タイトル
 ## Notify
 
@@ -98,3 +59,43 @@ https://notify-38221.herokuapp.com/
 素晴らしい作品を更に多くの人に見てもらいたいし、自分の好きな番組や製作者さんを応援したいという気持ちもあります。
 私のようにいろいろなサブスクから作品をみていて管理が苦手な方に
 このアプリでVODの視聴を更に楽しんでいただきたいと思い作成しました。
+
+
+# テーブル設計
+
+## users テーブル
+
+| Column                | Type    | Options                   |
+| --------------------- | ------- | ------------------------- |
+| email                 | string  | null: false, unique: true |
+| encrypted_password    | string  | null: false               |
+| nickname              | string  | null: false               |
+
+
+### Association
+
+- has_many :contents
+
+
+## contents テーブル
+
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| title              | string     | null: false                    |
+| media              | integer    | null: false                    |
+| week               | integer    | null: false                    |
+| notify             | integer    | null: false                    |
+| user               | references | null: false, foreign_key: true |
+
+
+### Association
+
+- belongs_to :user
+
+
+## lintのcheck用
+
+- yarn lint:stylesheet
+- erblint --lint-all -a
+- bundle exec rubocop -a
+
