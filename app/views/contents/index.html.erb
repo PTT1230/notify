@@ -1,18 +1,24 @@
 <body id="bodyindex">
   <div id="index_top">
-  <!-- ローディング画面 -->
     <div id="loading">
       <div class="spinner"></div>
     </div>
     <% unless user_signed_in? %>
-    <div >
-      <p class="animation index">番組を登録するとLINEでおしらせ</p>
-      <p class="animation">Let's use it!</p>
-    </div>
-    <div class="user_out">
-      <%= link_to 'Log In', new_user_session_path, class: 'user_link animation' %>
-      <%= link_to 'Sign Up', new_user_registration_path, class: 'user_link animation' %>
-    </div>
+      <div >
+        <p class="animation index">番組の管理、はじめよう</p>
+        <p class="animation">Let's use it!</p>
+      </div>
+      <div class="user_out">
+        <%= link_to 'Log In', new_user_session_path, class: 'user_link animation left' %>
+        <%= link_to 'Sign Up', new_user_registration_path, class: 'user_link animation right' %>
+      </div>
+      <div class="top_message">
+        番組を管理して、もっと動画を楽しもう
+        <div class="top_comment">
+          NotifyをLINEでお友達登録すると、放送日におしらせ<br>
+          サブスク掛け持ちの方、TV好きのあなたのために<br>
+        </div>
+      </div>
     <% else %>
       <%= render 'content' %>
     <% end %>
