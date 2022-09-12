@@ -20,6 +20,7 @@ https://user-images.githubusercontent.com/108722053/189515870-39e252b8-8ede-4101
 ## コンテンツ登録ページ
 https://user-images.githubusercontent.com/108722053/189517162-d8da0c9e-0a05-4217-abf3-972f86f7eedf.mp4
 
+https://i.gyazo.com/0fac265dd149084f75805663500ac564.mp4
 
 # 本番環境
 ## URL
