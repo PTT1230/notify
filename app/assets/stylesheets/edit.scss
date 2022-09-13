@@ -1,14 +1,15 @@
 #content_edit {
   padding: 150px 0;
   background-color: rgb(207, 205, 205);
-
   /* 画像を常に天地左右の中央に配置 */
   background-position: center center;
   /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
   background-attachment: fixed;
   /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
   background-size: cover;
-
+  @include mq("lg") {
+    height: 1200px;
+  }
   h2 {
     margin-top: 30px;
     font-size: 50px;
